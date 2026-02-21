@@ -1,39 +1,52 @@
 package org.example;
 
 import org.example.model.Person;
-
-import java.util.ArrayList;
+import org.example.model.Employee;
+import org.example.service.PersonEnrollment;
+import org.example.service.EmployeeEnrollment;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Person p1 = new Person("Alice", 25);
-        Person p2 = new Person("Charlie", 30);
-        Person p3 = new Person("David", 22);
+        // ===== PERSONS =====
+        PersonEnrollment personEnrollment = new PersonEnrollment();
+        personEnrollment.addPerson(new Person("Alice", 67));
+        personEnrollment.addPerson(new Person("Bob", 78));
+        personEnrollment.addPerson(new Person("Charlie", 90));
 
-        ArrayList<Person> personList = new ArrayList<>();
+        System.out.println("=== Initial Persons ===");
+        personEnrollment.displayALL();
 
-        personList.add(p1);
-        personList.add(p2);
-        personList.add(p3);
-        personList.add(new Person("Crayl", 19));
+        // Update Alice's age
+        personEnrollment.updatePerson(new Person("Alice", 45));
 
-        for (Person p : personList) {
-            System.out.println("Name: " + p.getName());
-            System.out.println("Age: " + p.getAge());
-            System.out.println();
-        }
+        // Delete Alice
+        personEnrollment.deletePersonRecord(new Person("Alice", 0));
 
-        personList.get(1).setName("Bob the Builder");
-        personList.get(0).setAge(47);
+        System.out.println("=== Updated Persons ===");
+        personEnrollment.displayALL();
 
-        personList.remove(0);
+        // ===== EMPLOYEES =====
+        EmployeeEnrollment employeeEnrollment = new EmployeeEnrollment();
+        employeeEnrollment.addEmployee(new Employee(1, "Alice", "Developer"));
+        employeeEnrollment.addEmployee(new Employee(2, "Bob", "Designer"));
+        employeeEnrollment.addEmployee(new Employee(3, "Charlie", "Tester"));
+        employeeEnrollment.addEmployee(new Employee(4, "David", "Manager"));
 
-        for (Person p : personList) {
-            System.out.println("Name: " + p.getName());
-            System.out.println("Age: " + p.getAge());
-            System.out.println();
-        }
+        System.out.println("=== Initial Employees ===");
+        employeeEnrollment.displayAll();
+
+        // Update Bob's position
+        Employee updatedBob = new Employee(2, "Bob", "Designer");
+        updatedBob.setEmployeePosition("Lead Designer");
+        employeeEnrollment.updateEmployee(updatedBob);
+
+        // Delete Alice
+        Employee deleteAlice = new Employee(1, "Alice", "Developer");
+        employeeEnrollment.deleteEmployee(deleteAlice);
+
+        System.out.println("=== Updated Employees ===");
+        employeeEnrollment.displayAll();
     }
 }
