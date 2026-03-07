@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.model.Student;
 import org.example.model.Course;
+import org.example.module.Instructor;
 import org.example.service.ServiceRegistration;
 import org.example.service.CourseRegistration;
 
@@ -30,7 +31,6 @@ public class Main {
 
         serviceRegistration.deleteStudent(updatedStudent);
 
-
         CourseRegistration courseRegistration = new CourseRegistration();
 
         Course c1 = new Course("C001", "Integrative Programming", "IT");
@@ -48,5 +48,17 @@ public class Main {
         updatedCourse.display();
 
         courseRegistration.deleteCourse(c2);
+
+        Instructor i1 = new Instructor("I001", "Trish", "IT");
+        Instructor i2 = new Instructor("I002", "Keziah", "CS");
+        Instructor i3 = new Instructor("I003", "Ashley", "IT");
+
+        System.out.println(i1.getInstructorID() + " " + i1.getInstructorName() + "  " + i1.getCourses());
+        System.out.println(i2.getInstructorID() + " " + i2.getInstructorName() + "  " + i2.getCourses());
+        System.out.println(i3.getInstructorID() + " " + i3.getInstructorName() + "  " + i3.getCourses());
+
+
+
+
     }
 }
