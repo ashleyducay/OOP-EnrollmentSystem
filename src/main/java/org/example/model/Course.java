@@ -9,7 +9,7 @@ public class Course {
 
     }
 
-    public Course(String CourseID, String courseName, String program) {
+    public Course(String courseID, String courseName, String program) {
         this.courseID = courseID;
         this.courseName = courseName;
         this.program = program;

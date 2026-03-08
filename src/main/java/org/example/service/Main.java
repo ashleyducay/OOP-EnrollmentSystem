@@ -10,6 +10,8 @@ public class Main {
 
         ServiceRegistration sr = new ServiceRegistration();
 
+        System.out.println("              ");
+
         Student s1 = new Student("IT");
         s1.setPersonID("000123");
         s1.setPersonName("Alice");
@@ -17,6 +19,11 @@ public class Main {
         Student s2 = new Student("CS");
         s2.setPersonID("000124");
         s2.setPersonName("Bob");
+
+        sr.addStudent(s1);
+        sr.addStudent(s2);
+
+        sr.displayAll();
 
 
 
@@ -29,6 +36,7 @@ public class Main {
         cr.saveCourse(c2);
 
         cr.displayAllCourse();
+
 
 
         Instructor i1 = new Instructor("I001","Trish","Integrative Programming");

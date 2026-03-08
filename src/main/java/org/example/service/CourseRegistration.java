@@ -19,7 +19,7 @@ public class CourseRegistration {
             System.out.println("Course ID: " + c.getCourseID());
             System.out.println("Course Name: " + c.getCourseName());
             System.out.println("Program: " + c.getProgram());
-            System.out.println("---------------------------------");
+            System.out.println("        ");
         }
     }
 
