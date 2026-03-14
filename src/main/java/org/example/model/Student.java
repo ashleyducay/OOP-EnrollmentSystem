@@ -6,6 +6,7 @@ public class Student extends Person {
     public Student() {
 
     }
+
     public Student(String program){
         this.program = program;
 
@@ -22,5 +23,10 @@ public class Student extends Person {
         System.out.println("Student ID: " + " " + getPersonID());
         System.out.println("Student Name: " + " " + getPersonName());
         System.out.println("Program: " + " " + getProgram() + "\n");
+    }
+    @Override
+    public void mainTask() {
+        System.out.println("Student Enrolled");
+
     }
 }

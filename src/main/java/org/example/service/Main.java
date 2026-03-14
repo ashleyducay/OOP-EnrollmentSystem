@@ -4,13 +4,14 @@ import org.example.model.Student;
 import org.example.model.Course;
 import org.example.model.Instructor;
 
+import java.sql.SQLOutput;
+
 public class Main {
 
     public static void main(String[] args) {
 
         ServiceRegistration sr = new ServiceRegistration();
-
-        System.out.println("              ");
+        System.out.println("");
 
         Student s1 = new Student("IT");
         s1.setPersonID("000123");
@@ -19,11 +20,6 @@ public class Main {
         Student s2 = new Student("CS");
         s2.setPersonID("000124");
         s2.setPersonName("Bob");
-
-        sr.addStudent(s1);
-        sr.addStudent(s2);
-
-        sr.displayAll();
 
 
 
@@ -38,7 +34,6 @@ public class Main {
         cr.displayAllCourse();
 
 
-
         Instructor i1 = new Instructor("I001","Trish","Integrative Programming");
         Instructor i2 = new Instructor("I002","Keziah","Data Structures");
 
@@ -46,5 +41,15 @@ public class Main {
 
         System.out.println(i1.getPersonID()+" "+i1.getPersonName()+" "+i1.getCourses());
         System.out.println(i2.getPersonID()+" "+i2.getPersonName()+" "+i2.getCourses());
+        System.out.println("        ");
+
+        TuitionFeePayment tuitionFeePayment = new TuitionFeePayment();
+        System.out.println(tuitionFeePayment.calculateTuitionFee(3,0));
+        tuitionFeePayment.makePayment(1000);
+
+        System.out.println(tuitionFeePayment.getBalance());
+        System.out.println(tuitionFeePayment.isFullyPaid());
+
+
     }
 }

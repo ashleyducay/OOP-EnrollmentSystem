@@ -23,4 +23,9 @@ public class Instructor extends Person {
         System.out.println("Courses: " + getCourses());
         System.out.println("---------------------------------");
     }
+
+    @Override
+    public void mainTask() {
+
+    }
 }
