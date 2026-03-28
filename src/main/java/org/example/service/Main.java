@@ -4,13 +4,11 @@ import org.example.model.Student;
 import org.example.model.Course;
 import org.example.model.Instructor;
 
-import java.sql.SQLOutput;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        ServiceRegistration sr = new ServiceRegistration();
+        StudentRegistration sr = new StudentRegistration();
         System.out.println("");
 
         Student s1 = new Student("IT");
@@ -49,6 +47,9 @@ public class Main {
 
         System.out.println(tuitionFeePayment.getBalance());
         System.out.println(tuitionFeePayment.isFullyPaid());
+
+
+
 
 
     }

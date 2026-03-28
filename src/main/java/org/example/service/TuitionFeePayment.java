@@ -31,7 +31,7 @@ public class TuitionFeePayment {
 
         public static void main(String[] args) {
 
-            ServiceRegistration sr = new ServiceRegistration();
+            StudentRegistration sr = new StudentRegistration();
 
             System.out.println("              ");
 
