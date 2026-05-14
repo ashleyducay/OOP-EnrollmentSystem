@@ -4,29 +4,27 @@ public class Course {
     private String courseID;
     private String courseName;
     private String program;
-
-    public Course(){
-
+    private int units;
+    public Course() {
     }
 
-    public Course(String courseID, String courseName, String program) {
+    public Course(String courseID, String courseName, String program, int units) {
         this.courseID = courseID;
         this.courseName = courseName;
         this.program = program;
-
+        this.units = units;
     }
-    public String getCourseID(){
+
+    public String getCourseID() {
         return courseID;
-
     }
+
     public void setCourseID(String courseID) {
         this.courseID = courseID;
-
     }
 
     public String getCourseName() {
         return courseName;
-
     }
 
     public void setCourseName(String courseName) {
@@ -35,25 +33,17 @@ public class Course {
 
     public String getProgram() {
         return program;
-
     }
 
-    public void setProgram(String program){
+    public void setProgram(String program) {
         this.program = program;
     }
-    public void display(){
-        System.out.println("Course ID: " + " " + getCourseID());
-        System.out.println("Course Name: " + " " + getCourseName());
-        System.out.println("Program: " + " " + getProgram() + "\n");
 
+    public int getUnits() {
+        return units;
     }
 
-    @Override
-    public String toString() {
-        return "Course{" +
-                "courseID='" + courseID + '\'' +
-                ", courseName='" + courseName + '\'' +
-                ", program='" + program + '\'' +
-                '}';
+    public void setUnits(int units) {
+        this.units = units;
     }
 }
