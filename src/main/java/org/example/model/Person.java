@@ -1,30 +1,32 @@
 package org.example.model;
 
 public abstract class Person {
-    private String personID;
-    private String personName;
+    private String PersonID;
+    private String PersonName;
 
-    public Person() { }
-
-    public Person(String personID, String personName){
-        this.personID = personID;
-        this.personName = personName;
+    public Person(String PersonName, String PersonID) {
+        this.PersonName = PersonName;
+        this.PersonID = PersonID;
     }
 
-    public String getPersonID() {
-        return personID;
+    public Person() {
+
     }
 
-    public void setPersonID(String personID) {
-        this.personID = personID;
+    public String getPersonID(){
+        return PersonID;
     }
 
-    public String getPersonName() {
-        return personName;
+    public void setPersonID(String PersonID){
+        this.PersonID = PersonID;
     }
 
-    public void setPersonName(String personName) {
-        this.personName = personName;
+    public String getPersonName(){
+        return PersonName;
+    }
+
+    public void setPersonName(String PersonName){
+        this.PersonName= PersonName;
     }
 
     public abstract void mainTask();
